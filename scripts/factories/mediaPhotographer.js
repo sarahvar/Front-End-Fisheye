@@ -91,7 +91,6 @@ export class Mediaphotographer {
     let picture, mediaHtml;
     if (image?.endsWith(".jpg")) {
       picture = `assets/images/${result}/${image}`;
-      picture = `assets/images/${result}/${image}`;
       mediaHtml = `<img lightbox-media=${title} src="${picture}" alt="${title}" tabIndex="0" />`;
     } else if (video?.endsWith(".mp4")) {
       picture = `assets/images/${result}/${video}`;
