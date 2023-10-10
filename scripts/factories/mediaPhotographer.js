@@ -82,12 +82,12 @@ export class Mediaphotographer {
             <img src="${picture}" alt="${name}" aria-label="${name}">
             `;
   }
-  async insertMedias(media, photographer) {
+   insertMedias(media, photographer) {
     const containerCards = document.getElementById("containerCards");
     const card = document.createElement("div");
     let { title, image, id, likes, video } = media;
     const regexName = /^\w+/; // permets de supprimé le nom de famille de name du fichier json
-    const result = await photographer.name.match(regexName)[0];
+    const result =  photographer.name.match(regexName)[0];
     let picture, mediaHtml;
     if (image?.endsWith(".jpg")) {
       picture = `assets/images/${result}/${image}`;
